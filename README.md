@@ -8,3 +8,5 @@ Our website provides students with personalized feedback and guidance on their c
 So if you're a student preparing for job placements, sign up today and start building your professional profile with our user-friendly platform. We look forward to helping you achieve your career goals!
 
 SkillScape, building profiles & shaping futures.
+
+Figma Design File :- https://www.figma.com/file/8feIwpscwxU681Ra3MKhkz/SkillScape-Hi-Fid-Prototype?node-id=0%3A1&t=6jIOjhLGFa2gdfE6-1
