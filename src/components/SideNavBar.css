@@ -2,7 +2,8 @@
 	background-color: var(--dark);
 	width: 300px;
 	height: 100vh;
-	position: relative;
+	position: sticky;
+	top: 0px;
 	color: var(--light);
 	transition: 0.4s;
 }
@@ -154,4 +155,7 @@
 
 .logout-icon:hover {
 	background-color: var(--primary);
+}
+
+@media only screen and (max-width: 768px){
 }

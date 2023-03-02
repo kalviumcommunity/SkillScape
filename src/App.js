@@ -1,11 +1,9 @@
-import SideNavBar from "./components/SideNavBar";
+import React from 'react';
 
 function App() {
-	return (
-		<div>
-			<SideNavBar />
-		</div>
-	);
+  return (
+	<div>App</div>
+  )
 }
 
-export default App;
+export default App
