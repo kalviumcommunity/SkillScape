@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import AdminNavBar from './components/AdminNavBar';
-import './Admin.css';
+import AdminNavBar from './AdminNavBar';
+import './AdminCompany.css';
 
 function Admin() {
   const [list, setList] = useState([]);
@@ -31,23 +31,23 @@ function Admin() {
         <div id='container'>
         <AdminNavBar />
         <div className='path'>
-            Navaneeth Arunkumar / Checklist /<b> Add tasks </b>
+            Navaneeth Arunkumar / Checklist /<b> Add Companies </b>
         </div>
-        <div className='header'>
-            Add Tasks
+        <div className='header-adminc'>
+            <b>Add Companies</b>
         </div>
-        <div className="tasks">
+        <div className="tasks-adminc">
           <input 
           id="input-box"
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)} />
-          <button id="add-button" onClick={() => addTodo(input)}>Add</button>
-          <ul id="list">
+          <button id="add-buttona" onClick={() => addTodo(input)}>+</button>
+          <ul id="list-admin">
             {list.map((todo) => (
-              <li id="task" key={todo.id}>
+              <li id="task-admin" key={todo.id}>
                 {todo.todo}
-                <button id="close-button" onClick={() => deleteTodo(todo.id)}>&times;</button>
+                <button id="close-buttona" onClick={() => deleteTodo(todo.id)}>&times;</button>
               </li>
             ))}
           </ul>

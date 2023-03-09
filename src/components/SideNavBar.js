@@ -1,20 +1,25 @@
 import React, { useState } from "react";
-import "./SideNavBar.css";
+import { useNavigate } from "react-router-dom";
+import "./SideNavBar.css"; 
 
 const SideNavBar = () => {
 	const [isExpanded, setExpendState] = useState(false);
+	const navigate = useNavigate();
 	const menuItems = [
 		{
 			text: "Pre-requsites",
 			icon: "icons/grid.svg",
+			path: "/studenthome",
 		},
         {
 			text: "Review Links",
 			icon: "icons/pie-chart.svg",
+			path: "/studentreview",
 		},
         {
 			text: "Companies",
 			icon: "icons/folder.svg",
+			path: "/studentcompany",
 		},
 		{
 			text: "Interview Dates",
@@ -23,6 +28,10 @@ const SideNavBar = () => {
 		{
 			text: "Chats",
 			icon: "icons/message.svg",
+		},
+		{
+			text: "Switch to Admin",
+			path: "/adminhome",
 		},
 	];
 	return (
@@ -53,15 +62,13 @@ const SideNavBar = () => {
 					</button>
 				</div>
 				<div className="nav-menu">
-					{menuItems.map(({ text, icon }) => (
+					{menuItems.map(({ text, icon, path }) => (
 						// eslint-disable-next-line jsx-a11y/anchor-is-valid
-						<a
-							className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
-							href="#"
-						>
+						<div className={isExpanded ? "menu-item" : "menu-item menu-item-NX"} onClick={() => navigate(`${path}`)}>
+						
 							<img className="menu-item-icon" src={icon} alt="" srcset="" />
 							{isExpanded && <p>{text}</p>}
-						</a>
+						</div>
 					))}
 				</div>
 			</div>
