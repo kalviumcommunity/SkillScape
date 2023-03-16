@@ -1,0 +1,70 @@
+.path-review{
+    color: #8F9597;
+    font-size: 18px;
+    margin: 40px 0px 0px 80px;
+}
+#container{
+    display: flex;
+}
+.path-review b{
+    color: black;
+}
+.header-sreview{
+    font-size: 40px;
+    margin: 115px 0px 0px -385px;
+}
+.tasks-sreview{
+    margin: 180px 0px 0px -225px;
+    font-size: 20px;
+}
+#list{
+    margin: 45px 0px 0px 0px;
+}
+#stask{
+    margin: 100px 0px -20px 20px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+#bullets{
+    list-style-type: square;
+}
+#stask:hover{
+    color: #3E9ECA;
+}
+#add-button{
+    background-color: #3E9ECA;
+    color: white;
+    margin-left: 10px;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 16px;
+}
+#close-button{
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: 0px;
+    border-color: #061b28;
+    font-size: 16px;
+}
+#input-box{
+    background-color: white;
+    color: #3E9ECA;
+    border-radius: 8px;
+    padding: 4px;
+    padding-right: 75px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 550px){
+    .path-review{
+        margin: 30px 0px 0px 125px;
+    }
+    .tasks-sreview{
+        margin-right: -390px;
+        margin-top: 230px;
+    }
+}
