@@ -22,13 +22,14 @@ const SideNavBar = () => {
 			icon: "icons/folder.svg",
 			path: "/admincompany"
 		},
+		// {
+		// 	text: "Chats",
+		// 	icon: "icons/message.svg",
+		// },
 		{
-			text: "Update Calendar",
+			text: "About",
 			icon: "icons/user.svg",
-		},
-		{
-			text: "Chats",
-			icon: "icons/message.svg",
+			path: "/about"
 		},
 		{
 			text:"Switch to Student",

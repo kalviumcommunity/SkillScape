@@ -1,0 +1,15 @@
+.path-aboutA{
+    color: #8F9597;
+    font-size: 18px;
+    margin: 40px 0px 0px 80px;
+}
+.container{
+    display: flex;
+}
+.path-aboutA b{
+    color: black;
+}
+.header-aboutA{
+    font-size: 40px;
+    margin: 115px 0px 0px -330px;
+}
