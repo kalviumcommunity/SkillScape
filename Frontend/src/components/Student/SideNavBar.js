@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SideNavBar.css"; 
+import LogoutButton from "../auth0/logout";
 
 const SideNavBar = () => {
 	const [isExpanded, setExpendState] = useState(false);
@@ -21,13 +22,14 @@ const SideNavBar = () => {
 			icon: "icons/folder.svg",
 			path: "/studentcompany",
 		},
+		// {
+		// 	text: "Chats",
+		// 	icon: "icons/message.svg",
+		// },
 		{
-			text: "Interview Dates",
+			text: "About",
 			icon: "icons/user.svg",
-		},
-		{
-			text: "Chats",
-			icon: "icons/message.svg",
+			path: "/about"
 		},
 		{
 			text: "Switch to Admin",
@@ -88,7 +90,8 @@ const SideNavBar = () => {
 						</div>
 					</div>
 				)}
-				<img className="logout-icon" src="icons/logout.svg" alt="" srcset="" />
+				{/* <img className="logout-icon" src="icons/logout.svg" alt="" srcset="" /> */}
+				<LogoutButton/>
 			</div>
 		</div>
 	);
