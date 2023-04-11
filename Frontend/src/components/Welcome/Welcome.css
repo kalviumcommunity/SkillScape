@@ -45,28 +45,29 @@
     color: #3E9ECA;
     position: absolute;
     top: 27rem;
-    right: 12rem;
+    right: 11.5rem;
 }
 .login:hover{
     background-color: white;
     transition: 0.7s;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
 }
-.signUp{
-    font-size: 24px;
-    padding: 14px 40px;
+.logout{
+    font-size: 14px;
+    padding: 8px 30px;
     border-radius: 4px;
     border: 2px solid #3E9ECA;
     background-color: #061b28;
     color: #3E9ECA;
-    position: absolute;
-    top: 27rem;
-    right: 6rem;
 }
-.signUp:hover{
-    background-color: white;
+.logout:hover{
+    background-color: #3E9ECA;
+    color: white;
     transition: 0.7s;
+    border: 2px solid #061b28;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
 }
 .logo{
     height: 150px;

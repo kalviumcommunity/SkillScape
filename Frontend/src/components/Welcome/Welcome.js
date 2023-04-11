@@ -16,9 +16,7 @@ function Welcome() {
         </div>
         <div className="right-div">
           <LoginButton/>
-          
-          {/* <button className="signUp">SignUp</button> */}
-          <img src="https://res.cloudinary.com/dvfeh6kup/image/upload/v1681033171/skillscape-black-logo_fco0tn.png" alt="" className="logo" />
+          <img src="https://res.cloudinary.com/dvfeh6kup/image/upload/v1681033171/skillscape-black-logo_fco0tn.png" alt="logo" className="logo" />
         </div>
     </div>
   )
