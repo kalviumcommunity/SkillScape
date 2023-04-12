@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Student/SideNavBar.css";
+import LogoutButton from "../auth0/logout";
 
 
 const SideNavBar = () => {
@@ -29,7 +30,7 @@ const SideNavBar = () => {
 		{
 			text: "About",
 			icon: "icons/user.svg",
-			path: "/about"
+			path: "/aboutadmin"
 		},
 		{
 			text:"Switch to Student",
@@ -90,7 +91,8 @@ const SideNavBar = () => {
 						</div>
 					</div>
 				)}
-				<img className="logout-icon" src="icons/logout.svg" alt="" srcset="" />
+				{/* <img className="logout-icon" src="icons/logout.svg" alt="" srcset="" /> */}
+				<LogoutButton />
 			</div>
 		</div>
 	);

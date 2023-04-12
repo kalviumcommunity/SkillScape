@@ -9,6 +9,7 @@ import AdminLink from './components/Admin/AdminLink';
 import AdminCompany from './components/Admin/AdminCompany';
 import Welcome from './components/Welcome/Welcome';
 import About from './components/Student/About';
+import AboutA from './components/Admin/AboutA';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/adminlink' element={<AdminLink />} />
       <Route path='/admincompany' element={<AdminCompany />} />
       <Route path='/about' element={<About />} />
+      <Route path='aboutadmin' element={<AboutA />} />
     </Routes>
   )
 }

@@ -31,7 +31,7 @@ function Admin() {
         <div id='container'>
         <AdminNavBar />
         <div className='path-admincomp'>
-            Navaneeth Arunkumar / Checklist /<b> Add Companies </b>
+            Navaneeth Arunkumar / Admin /<b> Add Companies </b>
         </div>
         <div className='header-adminc'>
             <b>Add Companies</b>
