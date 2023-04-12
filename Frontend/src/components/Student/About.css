@@ -27,12 +27,8 @@
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
-    position: absolute;
-    top: 16rem;
-    left: 35rem;
+    margin: 255px 0px 0px -105px;
 }
 .bglogo{
-    position: absolute;
-    left: 50rem;
-    top: 18rem;
+    margin: 330px 0px 0px -325px;
 }
