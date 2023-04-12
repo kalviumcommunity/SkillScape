@@ -155,6 +155,7 @@
 
 .logout-icon:hover {
 	background-color: var(--primary);
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 550px){
