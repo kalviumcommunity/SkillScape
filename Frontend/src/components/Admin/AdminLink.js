@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import AdminNavBar from './AdminNavBar';
 import './AdminLink.css';
 
+//{* Not yet implemented *}
+
 function Admin() {
   const [links, setLinks] = useState([]);
   const [input, setInput] = useState("");
