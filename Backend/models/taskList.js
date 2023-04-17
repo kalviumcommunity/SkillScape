@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const taskList = new Schema ({
     userId: {
         type: String,
+        index:true
         // required: true
     },
     description: {
