@@ -1,3 +1,4 @@
+import Carousel from "../Carousel/Carousel";
 import SideNavBar from "./SideNavBar";
 import './StudentCompany.css';
 
@@ -13,7 +14,7 @@ function Student() {
 			<div className="header-scompany">
 				<b>Companies Visiting</b>
 			</div>
-			
+			<Carousel />
 			</div>
 		</div>
 	);

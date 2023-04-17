@@ -13,4 +13,22 @@ const taskList = new Schema ({
     }
 })
 
+// const linkList = new Schema ({
+//     userId: {
+//         type: String,
+//         // required: true
+//     },
+//     description: {
+//         type: String,
+//         required: true
+//     }
+// })
+
+
+
 module.exports = mongoose.model('Tasks', taskList)
+// module.exports = {
+//     Tasks: mongoose.model('Tasks', taskList),
+//     Links: mongoose.model('Links', linkList)
+//   };
+  

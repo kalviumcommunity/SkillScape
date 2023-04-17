@@ -1,60 +1,101 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AdminNavBar from './AdminNavBar';
 import './AdminLink.css';
 
+//{* Not yet implemented *}
+
 function Admin() {
-  const [list, setList] = useState([]);
+  const [links, setLinks] = useState([]);
   const [input, setInput] = useState("");
 
-  const addTodo = (todo) => {
-    const newTodo = {
-      id: Math.random(),
-      todo: todo,
+  const addLink = async (description) => {
+    const newLink = {
+      description,
     };
 
-    // add the todo to the list
-    setList([...list, newTodo]);
+    // send POST request to server
+    const response = await fetch('/links', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newLink),
+    });
+
+    if (!response.ok) {
+      console.error('Failed to add link to database');
+      return;
+    }
+
+    // add the new link to the list
+    const link = await response.json();
+    setLinks([...links, link]);
 
     // clear input box
     setInput("");
   };
 
-  const deleteTodo = (id) => {
-    // Filter out todo with the id
-    const newList = list.filter((todo) => todo.id !== id);
+  const deleteLink = async (id) => {
+    // send DELETE request to server
+    const response = await fetch(`/links/${id}`, {
+      method: 'DELETE',
+    });
 
-    setList(newList);
+    if (!response.ok) {
+      console.error('Failed to delete link from database');
+      return;
+    }
+
+    // Filter out link with the id
+    const newLinks = links.filter((link) => link._id !== id);
+
+    setLinks(newLinks);
   };
+
+  // send get request to server to retrieve links when component mounts
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('/links');
+      if (!response.ok) {
+        console.error('Failed to fetch links from database');
+        return;
+      }
+      const data = await response.json();
+      setLinks(data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
-        <div id='container'>
+      <div id='container'>
         <AdminNavBar />
         <div className='path-adminlink'>
-            Navaneeth Arunkumar / Admin /<b> Update Links </b>
+          Navaneeth Arunkumar / Admin /<b> Update Links </b>
         </div>
         <div className='header-adminl'>
-            <b>Update Links</b>
+          <b>Update Links</b>
         </div>
         <div className="tasks-adminl">
           <input 
-          id="input-box"
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)} />
-          <button id="add-buttonal" onClick={() => addTodo(input)}>+</button>
+            id="input-box"
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)} />
+          <button id="add-buttonal" onClick={() => addLink(input)}>+</button>
+
           <ul id="list-admin">
-            {list.map((todo) => (
-              <li id="task-admin" key={todo.id}>
-                {todo.todo}
-                <button id="close-buttona" onClick={() => deleteTodo(todo.id)}>&times;</button>
+            {links.map((link) => (
+              <li id="task-admin" key={link._id}>
+                {link.description}
+                <button id="close-buttona" onClick={() => deleteLink(link._id)}>&times;</button>
               </li>
             ))}
           </ul>
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Admin
+export default Admin;
