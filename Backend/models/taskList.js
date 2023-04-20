@@ -6,26 +6,12 @@ const taskList = new Schema ({
     userId: {
         type: String,
         index:true
-        // required: true
     },
     description: {
         type: String,
         required: true
     }
 })
-
-// const linkList = new Schema ({
-//     userId: {
-//         type: String,
-//         // required: true
-//     },
-//     description: {
-//         type: String,
-//         required: true
-//     }
-// })
-
-
 
 module.exports = mongoose.model('Tasks', taskList)
 // module.exports = {

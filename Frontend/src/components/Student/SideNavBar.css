@@ -160,6 +160,32 @@
 	transition: 0.4s;
 }
 
+.nav-details {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+.nav-details img {
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	margin-left: 0.5rem;
+}
+
+.nav-details h2{
+	margin: 0px 0px 0px 5px;
+	font-size: 1rem;
+	font-weight: bolder;
+}
+
+.nav-details p {
+	margin: 0px 0px 0px 0px;
+	margin-right: 15px;
+	font-size: 0.55rem;
+	font-weight: bold;
+}
+
 @media only screen and (max-width: 550px){
 	.side-nav-container{
 		position: fixed;
