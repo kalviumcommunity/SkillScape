@@ -11,4 +11,4 @@ SkillScape, building profiles & shaping futures.
 
 Figma Design File :- https://www.figma.com/file/8feIwpscwxU681Ra3MKhkz/SkillScape-Hi-Fid-Prototype?node-id=0%3A1&t=6jIOjhLGFa2gdfE6-1
 
-Application Deployed Link :- skillscape.netlify.app
+Application Deployed Link :- https://skillscape.netlify.app
