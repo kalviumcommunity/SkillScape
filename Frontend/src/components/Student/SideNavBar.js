@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SideNavBar.css"; 
 import LogoutButton from "../auth0/logout";
+import Profile from "../auth0/profile";
 
 const SideNavBar = () => {
 	const [isExpanded, setExpendState] = useState(false);
@@ -78,16 +79,11 @@ const SideNavBar = () => {
 			<div className="nav-footer">
 				{isExpanded && (
 					<div className="nav-details">
-						<img
-							className="nav-footer-avatar"
-							src="icons/admin-avatar.svg"
-							alt=""
-							srcset=""
-						/>
-						<div className="nav-footer-info">
+						<Profile />
+						{/* <div className="nav-footer-info">
 							<p className="nav-footer-user-name">Navaneeth Arunkumar</p>
 							<p className="nav-footer-user-position">Student</p>
-						</div>
+						</div> */}
 					</div>
 				)}
 				{/* <img className="logout-icon" src="icons/logout.svg" alt="" srcset="" /> */}
