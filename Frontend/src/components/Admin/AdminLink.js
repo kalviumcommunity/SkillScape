@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AdminNavBar from './AdminNavBar';
 import './AdminLink.css';
+import Footer from '../Student/Footer';
 
 //{* Not yet implemented *}
 
@@ -93,6 +94,7 @@ function Admin() {
             ))}
           </ul>
         </div>
+        <Footer />
       </div>
     </div>
   );

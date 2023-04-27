@@ -11,6 +11,7 @@ import Welcome from './components/Welcome/Welcome';
 import About from './components/Student/About';
 import AboutA from './components/Admin/AboutA';
 
+
 function App() {
   return (
     <Routes>
@@ -22,7 +23,7 @@ function App() {
       <Route path='/adminlink' element={<AdminLink />} />
       <Route path='/admincompany' element={<AdminCompany />} />
       <Route path='/about' element={<About />} />
-      <Route path='aboutadmin' element={<AboutA />} />
+      <Route path='/aboutadmin' element={<AboutA />} />
     </Routes>
   )
 }

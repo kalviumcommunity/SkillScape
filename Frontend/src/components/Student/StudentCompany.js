@@ -1,6 +1,7 @@
 import Carousel from "../Carousel/Carousel";
 import SideNavBar from "./SideNavBar";
 import './StudentCompany.css';
+import Footer from './Footer'
 
 function Student() {
 	return (
@@ -15,6 +16,7 @@ function Student() {
 				<b>Companies Visiting</b>
 			</div>
 			<Carousel />
+			<Footer />
 			</div>
 		</div>
 	);
