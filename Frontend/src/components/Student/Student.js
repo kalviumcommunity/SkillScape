@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Student() {
 	const [tasks, setTasks] = useState([]);
-	const notify = () => toast.success("Task Done!",{
+	const notify = (e) => e.target.checked&&toast.success("Task Done!",{
 		theme: "dark"
 	});
 
@@ -21,8 +21,7 @@ function Student() {
 		<div>
 			<div id="container">
 				<SideNavBar />
-				<ToastContainer
-				limit={1} />
+				<ToastContainer />
 				<div className="path-student">
 					Navaneeth Arunkumar / Checklist /<b> Pre-requsites </b>
 				</div>
