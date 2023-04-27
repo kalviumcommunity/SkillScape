@@ -12,7 +12,7 @@ function Admin() {
     };
 
     // send POST request to server
-    const response = await fetch('/tasks', {
+    const response = await fetch(`${process.env.REACT_APP_BACKENDURL}/tasks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function Admin() {
 
   const deleteTodo = async (id) => {
     // send DELETE request to server
-    const response = await fetch(`/tasks/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKENDURL}/tasks/${id}`, {
       method: 'DELETE',
     });
 
@@ -53,7 +53,7 @@ function Admin() {
   // send get request to server to retrieve task when component mounts
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/tasks');
+      const response = await fetch(`${process.env.REACT_APP_BACKENDURL}/tasks`);
       if (!response.ok) {
         console.error('Failed to fetch tasks from database');
         return;
