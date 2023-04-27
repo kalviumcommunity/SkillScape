@@ -1,5 +1,6 @@
 import SideNavBar from "./SideNavBar";
 import './StudentReview.css';
+import Footer from './Footer';
 
 function Student() {
 	return (
@@ -20,6 +21,7 @@ function Student() {
                 <li><a id="stask" href="https://youtu.be/qq65UO1ikpE">How to stop sounding unprofessional | The Ultimate Interview Tip</a></li>
                 </ul>
 			</div>
+			<Footer />
 			</div>
 		</div>
 	);

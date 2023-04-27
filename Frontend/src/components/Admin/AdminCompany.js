@@ -1,6 +1,7 @@
 import AdminNavBar from './AdminNavBar';
 import './AdminCompany.css';
 import Carousel from '../Carousel/Carousel';
+import Footer from '../Student/Footer';
 
 function Admin() {
   return (
@@ -14,6 +15,7 @@ function Admin() {
             <b>Add Companies</b>
         </div>
         <Carousel />
+        <Footer />
         </div>
     </div>
   )

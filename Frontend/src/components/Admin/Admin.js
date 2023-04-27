@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
+import Footer from '../Student/Footer';
 
 function Admin() {
   const [list, setList] = useState([]);
@@ -91,6 +92,7 @@ function Admin() {
             ))}
           </ul>
         </div>
+        <Footer />
         </div>
     </div>
   )

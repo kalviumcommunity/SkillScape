@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import SideNavBar from "./SideNavBar";
+import Footer from './Footer'
 
 function About() {
   return (
@@ -22,6 +23,7 @@ function About() {
       <div className="bglogo">
         <img src="https://res.cloudinary.com/dvfeh6kup/image/upload/v1666245172/dp_1_sbv3p6.webp" alt="kalvium" />
       </div>
+      <Footer />
         </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import SideNavBar from "./SideNavBar";
 import './Student.css';
+import Footer from './Footer'
 
 function Student() {
 	const [tasks, setTasks] = useState([]);
@@ -29,6 +30,7 @@ function Student() {
 						</label>
 					))}
 				</div>
+				<Footer />
 			</div>
 		</div>
 	);
