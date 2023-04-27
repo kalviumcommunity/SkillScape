@@ -6,7 +6,7 @@ function Student() {
 	const [tasks, setTasks] = useState([]);
 
 	useEffect(() => {
-		fetch('/tasks')
+		fetch(`${process.env.REACT_APP_BACKENDURL}/tasks`)
 			.then(response => response.json())
 			.then(data => setTasks(data));
 	}, []);
