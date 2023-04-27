@@ -2,9 +2,14 @@ import { useState, useEffect } from 'react';
 import SideNavBar from "./SideNavBar";
 import './Student.css';
 import Footer from './Footer'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Student() {
 	const [tasks, setTasks] = useState([]);
+	const notify = (e) => e.target.checked&&toast.success("Task Done!",{
+		theme: "dark"
+	});
 
 	useEffect(() => {
 		fetch(`${process.env.REACT_APP_BACKENDURL}/tasks`)
@@ -16,6 +21,7 @@ function Student() {
 		<div>
 			<div id="container">
 				<SideNavBar />
+				<ToastContainer />
 				<div className="path-student">
 					Navaneeth Arunkumar / Checklist /<b> Pre-requsites </b>
 				</div>
@@ -25,7 +31,7 @@ function Student() {
 				<div className="tasks-student">
 					{tasks.map(task => (
 						<label key={task._id}>
-							<input id='task-student' type="checkbox" value={task._id} />
+							<input onClick={notify} id='task-student' type="checkbox" value={task._id} />
 							{task.description}
 						</label>
 					))}
