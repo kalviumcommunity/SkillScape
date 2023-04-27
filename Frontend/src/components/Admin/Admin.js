@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
 import Footer from '../Student/Footer';
@@ -23,12 +25,18 @@ function Admin() {
 
     if (!response.ok) {
       console.error('Failed to add task to database');
+      toast.error("Failed to add task to database", {
+        theme: "dark"
+      })
       return;
     }
 
     // add the new task to the list
     const task = await response.json();
     setList([...list, task]);
+    toast.success("Task added successfully!", {
+      theme: "dark"
+    })
 
     // clear input box
     setInput("");
@@ -49,6 +57,9 @@ function Admin() {
     const newList = list.filter((todo) => todo._id !== id);
 
     setList(newList);
+    toast.warn("Task deleted!", {
+      theme: "dark"
+    })
   };
 
   // send get request to server to retrieve task when component mounts
@@ -69,6 +80,7 @@ function Admin() {
     <div>
         <div id='container'>
         <AdminNavBar />
+        <ToastContainer />
         <div className='path-admin'>
             Navaneeth Arunkumar / Admin /<b> Add tasks </b>
         </div>
