@@ -23,10 +23,6 @@ const SideNavBar = () => {
 			icon: "icons/folder.svg",
 			path: "/studentcompany",
 		},
-		// {
-		// 	text: "Chats",
-		// 	icon: "icons/message.svg",
-		// },
 		{
 			text: "About",
 			icon: "icons/user.svg",
@@ -80,13 +76,8 @@ const SideNavBar = () => {
 				{isExpanded && (
 					<div className="nav-details">
 						<Profile />
-						{/* <div className="nav-footer-info">
-							<p className="nav-footer-user-name">Navaneeth Arunkumar</p>
-							<p className="nav-footer-user-position">Student</p>
-						</div> */}
 					</div>
 				)}
-				{/* <img className="logout-icon" src="icons/logout.svg" alt="" srcset="" /> */}
 				<LogoutButton/>
 			</div>
 		</div>

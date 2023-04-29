@@ -103,8 +103,8 @@ function Admin() {
               </li>
             ))}
           </ul>
-        </div>
         <Footer />
+        </div>
         </div>
     </div>
   )

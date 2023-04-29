@@ -14,8 +14,4 @@ const taskList = new Schema ({
 }, {timestamps: true})
 
 module.exports = mongoose.model('Tasks', taskList)
-// module.exports = {
-//     Tasks: mongoose.model('Tasks', taskList),
-//     Links: mongoose.model('Links', linkList)
-//   };
   

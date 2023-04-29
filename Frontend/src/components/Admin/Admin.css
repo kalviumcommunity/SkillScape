@@ -11,11 +11,15 @@
 }
 .header-admin{
     font-size: 40px;
-    margin: 115px 0px 0px -350px;
+    margin: 115px 0px 0px -300px;
+    display: flex;
+    width: 30vh;
 }
 .tasks-admin{
     margin: 200px 0px 0px -185px;
     font-size: 20px;
+    position: relative;
+    width: 100%;
 }
 #list-admin{
     margin: 45px 0px 45px 0px;

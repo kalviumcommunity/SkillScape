@@ -7,7 +7,6 @@ function Student() {
 	return (
 		<div>
 			<div id="container">
-				
 			<SideNavBar />
 			<div className="path-company">
 				Navaneeth Arunkumar / Checklist /<b> Company </b>
