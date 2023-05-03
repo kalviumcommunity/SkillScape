@@ -41,10 +41,8 @@
     height: 100%;
     width:100%
 }
-
 .details{
     width: 33%;
-    /* height: 100vh; */    
     padding-left: 6rem;
 }
 .details h2{
@@ -60,4 +58,3 @@
     width: 84%;
     line-height: 30px;
 }
-
