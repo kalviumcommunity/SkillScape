@@ -39,8 +39,8 @@ const SideNavBar = () => {
 		<div
 			className={
 				isExpanded
-					? "side-nav-container"
-					: "side-nav-container side-nav-container-NX"
+					? "side-nav-containeradmin"
+					: "side-nav-container side-nav-container-NXadmin"
 			}
 		>
 			<div className="nav-upper">

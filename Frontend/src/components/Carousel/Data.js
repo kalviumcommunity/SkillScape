@@ -1,8 +1,8 @@
-import image1 from "./images/img1.png";
-import image2 from "./images/img2.png";
-import image3 from "./images/img3.png";
-import image4 from "./images/img4.png";
-import image5 from "./images/img5.png";
+import image1 from "./imagesc/img1.png";
+import image2 from "./imagesc/img2.png";
+import image3 from "./imagesc/img3.png";
+import image4 from "./imagesc/img4.png";
+import image5 from "./imagesc/img5.png";
 
 export const pictures = [
     {

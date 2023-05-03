@@ -2,6 +2,19 @@
     color: #8F9597;
     font-size: 18px;
     margin: 40px 0px 0px 80px;
+    width: 500px;
+}
+.side-nav-container-NXadmin{
+    width: 100px;
+}
+.side-nav-containeradmin{
+    background-color: var(--dark);
+    width: 350px;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    color: var(--light);
+    transition: 0.4s;
 }
 #container{
     display: flex;
@@ -11,12 +24,12 @@
 }
 .header-admin{
     font-size: 40px;
-    margin: 115px 0px 0px -300px;
+    margin: 115px 0px 0px -425px;
     display: flex;
-    width: 30vh;
+    width: 500px;
 }
 .tasks-admin{
-    margin: 200px 0px 0px -185px;
+    margin: 200px 0px 0px -390px;
     font-size: 20px;
     position: relative;
     width: 100%;
@@ -27,24 +40,32 @@
 #task-admin{
     margin: 65px 0px 0px -13px;
 }
-#add-buttona{
-    background-color: #3E9ECA;
+#add-buttonmeet{
+    background-color: green;
     color: white;
     margin-left: 10px;
-    width: 35px;
+    width: 80px;
     height: 30px;
     border-radius: 8px;
     font-size: 16px;
 }
-#close-buttona{
+#add-buttontodo{
+    background-color: rgb(255, 97, 39);
+    color: white;
+    margin-left: 10px;
+    width: 70px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#close-buttontodo{
     background-color: red;
     color: white;
     margin-left: 10px;
     border-radius: 8px;
+    border: 1px solid #061b28;
     width: 35px;
     height: 30px;
-    border: 0px;
-    border-color: #061b28;
     font-size: 16px;
 }
 #input-box{
@@ -54,6 +75,19 @@
     padding: 4px;
     padding-right: 75px;
     font-size: 16px;
+}
+.desc{
+    font-size: 12px;
+    border: 1px solid #3E9ECA;
+    width: fit-content;
+    padding: 5px 5px 5px 5px;
+    background-color: #061b28;
+    color: white;
+    border-radius: 25%;
+}
+.meh{
+    display: flex;
+    gap: 15px;
 }
 
 @media only screen and (max-width: 550px){

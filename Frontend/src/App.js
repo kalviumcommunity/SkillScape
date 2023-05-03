@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-import './index.css';
+import './App.css';
 import Student from './components/Student/Student';
 import Admin from './components/Admin/Admin';
 import StudentReview from './components/Student/StudentReview';
@@ -10,10 +10,31 @@ import AdminCompany from './components/Admin/AdminCompany';
 import Welcome from './components/Welcome/Welcome';
 import About from './components/Student/About';
 import AboutA from './components/Admin/AboutA';
-
+import SkillScapeSplash from './components/Welcome/SkillScapeSplash';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    },4000);
+
+    return () => clearTimeout(timeout)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('show-loader').style.display='none'   
+    }, 4000);
+  }, [])
+
   return (
+    <>
+    <div id='show-loader' className={`${loading ? 'show' : 'hide'}`}>
+      <SkillScapeSplash/>
+    </div>
+    <div className={`${loading ? 'hide' : 'show'}`}>
     <Routes>
       <Route path='/' element={<Welcome />} />
       <Route path='/adminhome' element={<Admin />} />
@@ -25,6 +46,8 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/aboutadmin' element={<AboutA />} />
     </Routes>
+    </div>
+    </>
   )
 }
 

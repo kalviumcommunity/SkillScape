@@ -1,78 +1,63 @@
-.left-div{
-    position: absolute;
-    top: 0rem;
-    height: 792px;
-    width: 850px;
-    background-color: #061b28;
-}
-.circle{
-    position: absolute;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background-color: #3E9ECA;
-    left: 46rem;
-    top: 8rem;
-}
-.circle-text{
-    position: absolute;
-    font-size: 3rem;
-    color: white;
-    left: 1.25rem;
-    top: 2.35rem;
-}
-.div-text{
-    color: #555c60;
-}
-.circle2-text{
-    position: absolute;
-    font-size: 0.75rem;
-    color: white;
-    left: 2rem;
-    top: 8.35rem;
-}
-.right-div{
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+
 .login{
-    font-size: 24px;
-    padding: 14px 40px;
-    border-radius: 4px;
-    border: 2px solid #3E9ECA;
-    background-color: #061b28;
-    color: #3E9ECA;
-    position: absolute;
-    top: 27rem;
-    right: 11.5rem;
+    width: 117px;
+    height: 37px;
+    background: rgba(25, 119, 242, 0.8);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 20px;
 }
 .login:hover{
     background-color: white;
-    transition: 0.4s;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid rgba(25, 119, 242, 0.8);
+    color: #061b28;
+    transition: 0.39s;
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
-.logout{
+.homepage{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.skillscape{
+    height: 58px;
+    padding: 13px;
+}
+.skillscape img{
+    height: 100%;
+}
+.gif{
+    width: 47%;
+}
+.gif img{
+    height: 100%;
+    width:100%
+}
+
+.details{
+    width: 33%;
+    /* height: 100vh; */    
+    padding-left: 6rem;
+}
+.details h2{
+    font-family: 'Cardo', serif;
+    font-size: 40px;
+    color: #5A92C7;
+    min-height: 110px;
+}
+.details p{
+    font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
-    padding: 8px 30px;
-    border-radius: 4px;
-    border: 2px solid #3E9ECA;
-    background-color: #061b28;
-    color: #3E9ECA;
+    color: #000000A1;
+    width: 84%;
+    line-height: 30px;
 }
-.logout:hover{
-    background-color: #3E9ECA;
-    color: white;
-    transition: 0.7s;
-    border: 2px solid #061b28;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
-}
-.logo{
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 15rem;
-    right: 11rem;
-}
+

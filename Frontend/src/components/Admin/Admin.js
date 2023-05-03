@@ -9,9 +9,10 @@ function Admin() {
   const [list, setList] = useState([]);
   const [input, setInput] = useState("");
 
-  const addTodo = async (todo) => {
+  const addTodo = async (todo, isTodo) => {
     const newTodo = {
       description: todo,
+      isTodo: isTodo
     };
 
     // send POST request to server
@@ -71,6 +72,7 @@ function Admin() {
         return;
       }
       const data = await response.json();
+      console.log(data);
       setList(data);
     };
     fetchData();
@@ -93,13 +95,17 @@ function Admin() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)} />
-          <button id="add-buttona" onClick={() => addTodo(input)}>+</button>
+          <button id="add-buttonmeet" onClick={() => addTodo(input, false)}>Meeting</button>
+          <button id="add-buttontodo" onClick={() => addTodo(input, true)}>To-Do</button>
 
           <ul id="list-admin">
             {list.map((todo) => (
               <li id="task-admin" key={todo._id}>
+                <div className="meh">
                 {todo.description}
+                { todo.isTodo?<div className="desc">To-Do</div> : <div className="desc">Meet</div> }
                 <button id="close-buttona" onClick={() => deleteTodo(todo._id)}>&times;</button>
+                </div>
               </li>
             ))}
           </ul>

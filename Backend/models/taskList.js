@@ -10,8 +10,11 @@ const taskList = new Schema ({
     description: {
         type: String,
         required: true
+    },
+    isTodo: {
+        type: Boolean,
+        required: true
     }
 }, {timestamps: true})
 
 module.exports = mongoose.model('Tasks', taskList)
-  
