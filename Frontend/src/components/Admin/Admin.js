@@ -4,14 +4,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
 import Footer from '../Student/Footer';
+import Delete from '../Welcome/imagesw/delete.png'
+
 
 function Admin() {
   const [list, setList] = useState([]);
   const [input, setInput] = useState("");
 
-  const addTodo = async (todo) => {
+  const addTodo = async (todo, isTodo) => {
     const newTodo = {
       description: todo,
+      isTodo: isTodo
     };
 
     // send POST request to server
@@ -71,6 +74,7 @@ function Admin() {
         return;
       }
       const data = await response.json();
+      console.log(data);
       setList(data);
     };
     fetchData();
@@ -91,20 +95,24 @@ function Admin() {
           <input 
           id="input-box"
           type="text"
+          placeholder="Insert Task"
           value={input}
           onChange={(e) => setInput(e.target.value)} />
-          <button id="add-buttona" onClick={() => addTodo(input)}>+</button>
+          <button id="add-buttonmeet" onClick={() => addTodo(input, false)}>Meeting</button>
+          <button id="add-buttontodo" onClick={() => addTodo(input, true)}>To-Do</button>
 
           <ul id="list-admin">
             {list.map((todo) => (
               <li id="task-admin" key={todo._id}>
+                <div className="meh">
                 {todo.description}
-                <button id="close-buttona" onClick={() => deleteTodo(todo._id)}>&times;</button>
+                  <img onClick={() => deleteTodo(todo._id)} className="trash-icon" src={Delete} alt="trash" />
+                </div>
               </li>
             ))}
           </ul>
-        </div>
         <Footer />
+        </div>
         </div>
     </div>
   )

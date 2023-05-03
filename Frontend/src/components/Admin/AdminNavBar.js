@@ -24,10 +24,6 @@ const SideNavBar = () => {
 			icon: "icons/folder.svg",
 			path: "/admincompany"
 		},
-		// {
-		// 	text: "Chats",
-		// 	icon: "icons/message.svg",
-		// },
 		{
 			text: "About",
 			icon: "icons/user.svg",
@@ -43,8 +39,8 @@ const SideNavBar = () => {
 		<div
 			className={
 				isExpanded
-					? "side-nav-container"
-					: "side-nav-container side-nav-container-NX"
+					? "side-nav-containeradmin"
+					: "side-nav-container side-nav-container-NXadmin"
 			}
 		>
 			<div className="nav-upper">
@@ -81,13 +77,8 @@ const SideNavBar = () => {
 				{isExpanded && (
 					<div className="nav-details">
 						<Profile />
-						{/* <div className="nav-footer-info">
-							<p className="nav-footer-user-name">Navaneeth Arunkumar</p>
-							<p className="nav-footer-user-position">Admin</p>
-						</div> */}
 					</div>
 				)}
-				{/* <img className="logout-icon" src="icons/logout.svg" alt="" srcset="" /> */}
 				<LogoutButton />
 			</div>
 		</div>

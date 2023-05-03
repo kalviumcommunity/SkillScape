@@ -16,18 +16,20 @@ router.get('/tasks', async (req, res) => {
 
 // POST request to add a task for a user
 router.post('/tasks', async (req, res) => {
-  const { description } = req.body;
+  const { description, isTodo } = req.body;
 
   try {
     let task;
     if (task) {
       
       task.description = description;
+      task.isTodo = isTodo;
+      console.log(task)
       await task.save();
       return res.status(200).json(task);
     } else {
       // add task description
-      task = new Task({ description });
+      task = new Task({ description, isTodo });
       await task.save();
       return res.status(201).json(task);
     }
