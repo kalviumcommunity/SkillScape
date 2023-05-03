@@ -4,6 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
 import Footer from '../Student/Footer';
+import Delete from '../Welcome/imagesw/delete.png'
+
 
 function Admin() {
   const [list, setList] = useState([]);
@@ -93,6 +95,7 @@ function Admin() {
           <input 
           id="input-box"
           type="text"
+          placeholder="Insert Task"
           value={input}
           onChange={(e) => setInput(e.target.value)} />
           <button id="add-buttonmeet" onClick={() => addTodo(input, false)}>Meeting</button>
@@ -103,8 +106,7 @@ function Admin() {
               <li id="task-admin" key={todo._id}>
                 <div className="meh">
                 {todo.description}
-                { todo.isTodo?<div className="desc">To-Do</div> : <div className="desc">Meet</div> }
-                <button id="close-buttona" onClick={() => deleteTodo(todo._id)}>&times;</button>
+                  <img onClick={() => deleteTodo(todo._id)} className="trash-icon" src={Delete} alt="trash" />
                 </div>
               </li>
             ))}

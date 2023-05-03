@@ -5,7 +5,7 @@ import Footer from '../Student/Footer';
 
 function AboutA() {
   return (
-    <div>
+    <div className='admin-portal'>
         <div className="container">
         <AdminNavBar />
         <div className="path-aboutA">
