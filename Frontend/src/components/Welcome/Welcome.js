@@ -24,10 +24,10 @@ function Welcome() {
         />
         </h2>
         <p>The ultimate destination for crafting a perfect profile to land your
-dream job. Our website offers expert guidance and comprehensive
-training to college freshers to help them meet the prerequisites
-required by top companies during placement drives.</p>
-<LoginButton />
+            dream job. Our website offers expert guidance and comprehensive
+            training to college freshers to help them meet the prerequisites
+            required by top companies during placement drives.</p>
+      <LoginButton />
       </div>
       <div className='gif'>
         <img src={animation} alt="" />

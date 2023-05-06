@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { MutatingDots } from 'react-loader-spinner';
 import name from './imagesw/name.png'
@@ -12,15 +11,15 @@ function SkillScapeSplash() {
             <div>
             <MutatingDots 
             height="100"
-  width="100"
-  color="#3E9ECA"
-  secondaryColor= '#061b28'
-  radius='12.5'
-  ariaLabel="mutating-dots-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
- />
+            width="100"
+            color="#3E9ECA"
+            secondaryColor= '#061b28'
+            radius='12.5'
+            ariaLabel="mutating-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            />
             </div>
 
     </div>

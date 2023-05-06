@@ -4,12 +4,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
 import Footer from '../Student/Footer';
-import Delete from '../Welcome/imagesw/delete.png'
+import Delete from '../Welcome/imagesw/delete.png';
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 function Admin() {
   const [list, setList] = useState([]);
   const [input, setInput] = useState("");
+  const {user,isAuthenticated} = useAuth0()
 
   const addTodo = async (todo, isTodo) => {
     const newTodo = {
@@ -86,7 +88,7 @@ function Admin() {
         <AdminNavBar />
         <ToastContainer />
         <div className='path-admin'>
-            Navaneeth Arunkumar / Admin /<b> Add tasks </b>
+            {isAuthenticated && user.name} / Admin /<b> Add tasks </b>
         </div>
         <div className='header-admin'>
             <b>Add Tasks</b>

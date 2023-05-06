@@ -4,9 +4,12 @@ import './Student.css';
 import Footer from './Footer'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function Student() {
 	const [tasks, setTasks] = useState([]);
+	const {user,isAuthenticated} = useAuth0()
 	const notify = (e) => e.target.checked&&toast.success("Task Done!",{
 		theme: "dark"
 	});
@@ -23,19 +26,22 @@ function Student() {
 				<SideNavBar />
 				<ToastContainer />
 				<div className="path-student">
-					Navaneeth Arunkumar / Checklist /<b> Pre-requsites </b>
+					{isAuthenticated && user.name} / Checklist /<b> Pre-requsites </b>
 				</div>
 				<div className="header-student">
 					<b>Task List</b>
 				</div>
 				<div className="tasks-student">
 					{tasks.map(task => (
-						<label key={task._id}>
+						<div className="task-container">
+					    <label key={task._id}>
 							<input onClick={notify} id='task-student' type="checkbox" value={task._id} />
 							{task.description}
 						</label>
+						</div>
 					))}
 				</div>
+
 				<Footer />
 			</div>
 		</div>
