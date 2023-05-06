@@ -26,7 +26,7 @@ function Student() {
 				<SideNavBar />
 				<ToastContainer />
 				<div className="path-student">
-					{isAuthenticated && user.name}/ Checklist /<b> Pre-requsites </b>
+					{isAuthenticated && user.name} / Checklist /<b> Pre-requsites </b>
 				</div>
 				<div className="header-student">
 					<b>Task List</b>
@@ -41,17 +41,6 @@ function Student() {
 						</div>
 					))}
 				</div>
-				{/* <div className="tasks-student">
-					<div className="task-container">
-						<label>
-							<input type="checkbox" />
-						</label>
-					</div>
-					<div className="task-container"><label></label></div>
-					<div className="task-container"><label></label></div>
-					<div className="task-container"><label></label></div>
-					<div className="task-container"><label></label></div>
-				</div> */}
 
 				<Footer />
 			</div>

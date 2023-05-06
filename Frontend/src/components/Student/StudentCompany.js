@@ -1,15 +1,17 @@
 import Carousel from "../Carousel/Carousel";
 import SideNavBar from "./SideNavBar";
 import './StudentCompany.css';
-import Footer from './Footer'
+import Footer from './Footer';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Student() {
+	const {user,isAuthenticated} = useAuth0();
 	return (
 		<div>
 			<div id="container">
 			<SideNavBar />
 			<div className="path-company">
-				Navaneeth Arunkumar / Checklist /<b> Company </b>
+				{isAuthenticated && user.name} / Checklist /<b> Company </b>
 			</div>
 			<div className="header-scompany">
 				<b>Companies Visiting</b>

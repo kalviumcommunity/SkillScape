@@ -2,14 +2,17 @@ import React from 'react';
 import './AboutA.css';
 import AdminNavBar from './AdminNavBar';
 import Footer from '../Student/Footer';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function AboutA() {
+  const {user,isAuthenticated} = useAuth0();
+
   return (
     <div className='admin-portal'>
         <div className="container">
         <AdminNavBar />
         <div className="path-aboutA">
-				Navaneeth Arunkumar / Admin /<b> About </b>
+				{isAuthenticated && user.name} / Admin /<b> About </b>
 			</div>
 			<div className="header-aboutA">
 				<b>About</b>

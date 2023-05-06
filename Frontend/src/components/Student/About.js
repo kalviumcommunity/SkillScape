@@ -1,15 +1,18 @@
 import React from 'react';
 import './About.css';
 import SideNavBar from "./SideNavBar";
-import Footer from './Footer'
+import Footer from './Footer';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function About() {
+  const {user,isAuthenticated} = useAuth0();
+
   return (
     <div>
         <div className="container">
         <SideNavBar />
         <div className="path-aboutS">
-				Navaneeth Arunkumar / Checklist /<b> About </b>
+				{isAuthenticated && user.name} / Checklist /<b> About </b>
 			</div>
 			<div className="header-aboutS">
 				<b>About</b>

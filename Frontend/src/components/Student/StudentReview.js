@@ -1,14 +1,17 @@
 import SideNavBar from "./SideNavBar";
 import './StudentReview.css';
 import Footer from './Footer';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Student() {
+	const {user,isAuthenticated} = useAuth0();
+
 	return (
 		<div>
 			<div id="container">
 			<SideNavBar />
 			<div className="path-review">
-				Navaneeth Arunkumar / Checklist /<b> Review Links </b>
+				{isAuthenticated && user.name} / Checklist /<b> Review Links </b>
 			</div>
 			<div className="header-sreview">
 				<b>Reference List</b>

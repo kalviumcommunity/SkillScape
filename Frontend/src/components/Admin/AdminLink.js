@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import AdminNavBar from './AdminNavBar';
 import './AdminLink.css';
 import Footer from '../Student/Footer';
+import { useAuth0 } from "@auth0/auth0-react";
 
 //{* Not yet implemented *}
 
 function Admin() {
   const [links, setLinks] = useState([]);
   const [input, setInput] = useState("");
+  const {user,isAuthenticated} = useAuth0();
+
 
   const addLink = async (description) => {
     const newLink = {
@@ -72,7 +75,7 @@ function Admin() {
       <div id='container'>
         <AdminNavBar />
         <div className='path-adminlink'>
-          Navaneeth Arunkumar / Admin /<b> Update Links </b>
+          {isAuthenticated && user.name} / Admin /<b> Update Links </b>
         </div>
         <div className='header-adminl'>
           <b>Update Links</b>
