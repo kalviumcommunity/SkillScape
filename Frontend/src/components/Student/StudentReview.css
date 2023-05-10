@@ -7,15 +7,17 @@
     display: flex;
 }
 .path-review b{
-    color: black;
+    color: #3E9ECA;
 }
 .header-sreview{
     font-size: 40px;
     margin: 115px 0px 0px -340px;
 }
 .tasks-sreview{
-    margin: 180px 0px 0px -225px;
+    margin: 115px 0px 0px -225px;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 #list{
     margin: 45px 0px 0px 0px;
@@ -32,6 +34,7 @@
 }
 #stask:hover{
     color: #3E9ECA;
+    transition: 0.2s;
 }
 #add-button{
     background-color: #3E9ECA;

@@ -32,8 +32,10 @@
 }
 
 .nav-brand img {
-	width: 40px;
-	padding: 0 10px;
+	width: 55px;
+    height: 55px;
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
 .hamburger {

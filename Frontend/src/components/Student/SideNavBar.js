@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./SideNavBar.css"; 
 import LogoutButton from "../auth0/logout";
 import Profile from "../auth0/profile";
+import LogoImg from "../Welcome/imagesw/blue-logo.png"
 
 const SideNavBar = () => {
 	const [isExpanded, setExpendState] = useState(false);
@@ -14,7 +15,7 @@ const SideNavBar = () => {
 			path: "/studenthome",
 		},
         {
-			text: "Review Links",
+			text: "Reference Links",
 			icon: "icons/pie-chart.svg",
 			path: "/studentreview",
 		},
@@ -46,7 +47,7 @@ const SideNavBar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<img src="icons/skillscape-logo.svg" alt="" srcset="" />
+							<img src={LogoImg} alt="" srcset="" />
 							<h2>SkillScape</h2>
 						</div>
 					)}
