@@ -7,42 +7,14 @@
     display: flex;
 }
 .path-student b{
-    color: black;
+    color: #3E9ECA;
 }
 .header-student{
     font-size: 40px;
     margin: 115px 0px 0px -340px;
 }
-.tasks-student{
-    margin: 180px 0px 0px -130px;
-    font-size: 20px;
-}
 #list{
     margin: 45px 0px 0px 0px;
-}
-#task-student{
-    margin: 70px 0px -23px -35px;
-    display: flex;
-    flex-direction: column;
-    width: 40px;
-    height: 15px;
-}
-#add-button{
-    background-color: #3E9ECA;
-    color: white;
-    margin-left: 10px;
-    border-radius: 8px;
-    padding: 4px;
-    font-size: 16px;
-}
-#close-button{
-    background-color: red;
-    color: white;
-    margin-left: 10px;
-    border-radius: 8px;
-    border: 0px;
-    border-color: #061b28;
-    font-size: 16px;
 }
 #input-box{
     background-color: white;
@@ -52,6 +24,54 @@
     padding-right: 75px;
     font-size: 16px;
 }
+
+.tasks-student {
+    margin: 180px 0px 0px -130px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 550px;
+  }
+  
+.task-card {
+    display: flex;
+    border: 2px solid #061b28;
+    padding-left: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 50rem;
+    height: 70px;
+  }
+  
+.task-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  }
+  
+.task-card .card-body {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+.task-card .form-check-input {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+    accent-color: #061b28;
+  }
+  
+.task-card .form-check-label {
+    flex-grow: 1;
+  }
+
+  .checked .form-check-label {
+    color: #3E9ECA;
+  }
+  
+  
 @media only screen and (max-width: 550px){
     .path-student{
         margin: 35px 0px 0px 125px;
