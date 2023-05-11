@@ -36,6 +36,45 @@
     color: #3E9ECA;
     transition: 0.2s;
 }
+.card-columns {
+    margin: 185px 0px 0px -260px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 550px;
+  }
+  
+  .review {
+    border: 2px solid #061b28;
+    margin-top: 40px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .review:hover{
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+  }
+  
+  .review-body {
+    padding: 15px;
+  }
+  
+  .review-body {
+    color: #3E9ECA;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    height: 3rem; 
+    margin-left: 30px;
+  }
+  
+  .review-body:hover {
+    color: #061b28;
+    text-decoration: underline;
+  }
+  
 
 
 @media only screen and (max-width: 550px){
