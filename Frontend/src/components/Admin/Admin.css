@@ -20,7 +20,7 @@
     display: flex;
 }
 .path-admin b{
-    color: black;
+    color: #3E9ECA;
 }
 .header-admin{
     font-size: 40px;
@@ -51,6 +51,12 @@
     border: none;
     cursor: pointer;
 }
+#add-buttonmeet:hover{
+    background-color: white;
+    color: #3E9ECA;
+    border: #3E9ECA 2px solid;
+    transition: 0.4s;
+}
 #add-buttontodo{
     background-color: #3E9ECA;
     color: white;
@@ -62,7 +68,12 @@
     border: none;
     cursor: pointer;
 }
-
+#add-buttontodo:hover{
+    background-color: white;
+    color: #3E9ECA;
+    border: #3E9ECA 2px solid;
+    transition: 0.4s;
+}
 #input-box{
     background-color: white;
     color: #3E9ECA;

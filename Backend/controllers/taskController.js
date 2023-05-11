@@ -57,4 +57,8 @@ const deleteTasks = async (req, res) => {
     }
   };
 
-module.exports = { listTasks, createTasks, deleteTasks }
+module.exports = { 
+    listTasks, 
+    createTasks, 
+    deleteTasks 
+}

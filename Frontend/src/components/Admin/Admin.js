@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaCheckCircle } from 'react-icons/fa';
+import { FaExclamationTriangle } from 'react-icons/fa';
+import { FaTimesCircle } from 'react-icons/fa';
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
 import Footer from '../Student/Footer';
@@ -19,7 +22,7 @@ function Admin() {
       isTodo: isTodo
     };
 
-    // send POST request to server
+    // send POST request to servery
     const response = await fetch(`${process.env.REACT_APP_BACKENDURL}/tasks`, {
       method: 'POST',
       headers: {
@@ -31,6 +34,14 @@ function Admin() {
     if (!response.ok) {
       console.error('Failed to add task to database');
       toast.error("Failed to add task to database", {
+        icon: <FaTimesCircle color="#3f9eca" />,
+        style: {
+          background: "#061b28",
+          color: "#3f9eca",
+        },
+        progressStyle: {
+          background: "#3f9eca"
+        },
         theme: "dark"
       })
       return;
@@ -40,6 +51,14 @@ function Admin() {
     const task = await response.json();
     setList([...list, task]);
     toast.success("Task added successfully!", {
+      icon: <FaCheckCircle color="#3f9eca" />,
+      style: {
+        background: "#061b28",
+        color: "#3f9eca",
+      },
+      progressStyle: {
+        background: "#3f9eca"
+      },
       theme: "dark"
     })
 
@@ -63,6 +82,14 @@ function Admin() {
 
     setList(newList);
     toast.warn("Task deleted!", {
+      icon: <FaExclamationTriangle color="#3f9eca" />,
+      style: {
+        background: "#061b28",
+        color: "#3f9eca",
+      },
+      progressStyle: {
+        background: "#3f9eca"
+      },
       theme: "dark"
     })
   };

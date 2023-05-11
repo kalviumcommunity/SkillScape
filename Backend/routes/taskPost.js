@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { listTasks, createTasks, deleteTasks } = require('../controllers/taskController')
-const Task = require('../models/taskList');
-
+const { 
+  listTasks, 
+  createTasks, 
+  deleteTasks 
+} = require('../controllers/taskController')
 
 // GET request to retrieve all tasks
 router.get('/tasks', listTasks)

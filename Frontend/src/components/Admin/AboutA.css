@@ -7,13 +7,13 @@
     display: flex;
 }
 .path-aboutA b{
-    color: black;
+    color: #3E9ECA;
 }
 .header-aboutA{
     font-size: 40px;
     margin: 115px 0px 0px -265px;
 }
-.card{
+.display-box{
     max-width: 300px;
     min-height: 200px;
     display: flex;

@@ -7,6 +7,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors());
+app.use(router);
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
@@ -17,5 +18,3 @@ mongoose.connect(process.env.MONGO_URI)
 .catch((error) => {
     console.log(error)
 })
-
-app.use(router);

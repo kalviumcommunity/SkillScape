@@ -15,7 +15,7 @@ function SkillScapeSplash() {
             color="#3E9ECA"
             secondaryColor= '#061b28'
             radius='12.5'
-            ariaLabel="mutating-dots-loading"
+            ariaLabel="mutating-dots-loading" 
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}
