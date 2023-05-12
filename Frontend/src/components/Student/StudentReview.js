@@ -16,13 +16,38 @@ function Student() {
 			<div className="header-sreview">
 				<b>Reference List</b>
 			</div>
-			<div className="tasks-sreview">
-                <ul id="bullets">
-                <li><a id="stask" href="https://youtu.be/eVQVqpE98No">Build the perfect LinkedIn Profile</a></li>
-                <li><a id="stask" href="https://youtu.be/y8YH0Qbu5h4">The Perfect Resume | Step by Step Guide</a></li>
-                <li><a id="stask" href="https://youtu.be/FroveScaTqw">Best Suit Combinations to attain the Professional Look!</a></li>
-                <li><a id="stask" href="https://youtu.be/qq65UO1ikpE">How to stop sounding unprofessional | The Ultimate Interview Tip</a></li>
-                </ul>
+			<div class="card-columns">
+				<div class="review">
+					<a href="https://youtu.be/eVQVqpE98No" class="boxreview">
+					<div class="review-body">
+						Build the perfect LinkedIn Profile
+					</div>
+					</a>
+				</div>
+
+				<div class="review">
+					<a href="https://youtu.be/y8YH0Qbu5h4" class="boxreview">
+					<div class="review-body">
+						The Perfect Resume | Step by Step Guide
+					</div>
+					</a>
+				</div>
+
+				<div class="review">
+					<a href="https://youtu.be/FroveScaTqw" class="boxreview">
+					<div class="review-body">
+						Best Suit Combinations to attain the Professional Look!
+					</div>
+					</a>
+				</div>
+
+				<div class="review">
+					<a href="https://youtu.be/qq65UO1ikpE" class="boxreview">
+					<div class="review-body">
+						How to stop sounding unprofessional | The Ultimate Interview Tip
+					</div>
+					</a>
+				</div>
 			</div>
 			<Footer />
 			</div>
