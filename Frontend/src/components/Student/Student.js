@@ -36,7 +36,7 @@ function Student() {
 				<SideNavBar />
 				<ToastContainer />
 				<div className="path-student">
-					{isAuthenticated && user.name} / Checklist /<b> Pre-requsites </b>
+					{isAuthenticated && user.name} / Student /<b> Pre-requsites </b>
 				</div>
 				<div className="header-student">
 					<b>Task List</b>

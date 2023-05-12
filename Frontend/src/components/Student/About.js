@@ -12,7 +12,7 @@ function About() {
         <div className="container">
         <SideNavBar />
         <div className="path-aboutS">
-				{isAuthenticated && user.name} / Checklist /<b> About </b>
+				{isAuthenticated && user.name} / Student /<b> About </b>
 			</div>
 			<div className="header-aboutS">
 				<b>About</b>
