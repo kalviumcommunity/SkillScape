@@ -11,7 +11,7 @@ function Student() {
 			<div id="container">
 			<SideNavBar />
 			<div className="path-company">
-				{isAuthenticated && user.name} / Checklist /<b> Company </b>
+				{isAuthenticated && user.name} / Student /<b> Company </b>
 			</div>
 			<div className="header-scompany">
 				<b>Companies Visiting</b>

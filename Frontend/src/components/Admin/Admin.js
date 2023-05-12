@@ -22,7 +22,7 @@ function Admin() {
       isTodo: isTodo
     };
 
-    // send POST request to servery
+    // send POST request to server
     const response = await fetch(`${process.env.REACT_APP_BACKENDURL}/tasks`, {
       method: 'POST',
       headers: {
