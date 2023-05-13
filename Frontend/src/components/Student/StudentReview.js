@@ -1,58 +1,53 @@
 import SideNavBar from "./SideNavBar";
-import './StudentReview.css';
-import Footer from './Footer';
+import "./StudentReview.css";
+import Footer from "./Footer";
+import { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Student() {
-	const {user,isAuthenticated} = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
+  const [references, setReferences] = useState([]);
 
-	return (
-		<div>
-			<div id="container">
-			<SideNavBar />
-			<div className="path-review">
-				{isAuthenticated && user.name} / Student /<b> Review Links </b>
-			</div>
-			<div className="header-sreview">
-				<b>Reference List</b>
-			</div>
-			<div class="card-columns">
-				<div class="review">
-					<a href="https://youtu.be/eVQVqpE98No" class="boxreview">
-					<div class="review-body">
-						Build the perfect LinkedIn Profile
-					</div>
-					</a>
-				</div>
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_BACKENDURL}/references`)
+      .then((response) => response.json())
+      .then((data) => setReferences(data))
+      .catch((error) => console.error(error));
+  }, []);
 
-				<div class="review">
-					<a href="https://youtu.be/y8YH0Qbu5h4" class="boxreview">
-					<div class="review-body">
-						The Perfect Resume | Step by Step Guide
-					</div>
-					</a>
-				</div>
+  return (
+    <div>
+      <div id="container">
+        <SideNavBar />
+        <div className="path-review">
+          {isAuthenticated && user.name} / Student /<b> Review Links </b>
+        </div>
+        <div className="header-sreview">
+          <b>Reference List</b>
+        </div>
 
-				<div class="review">
-					<a href="https://youtu.be/FroveScaTqw" class="boxreview">
-					<div class="review-body">
-						Best Suit Combinations to attain the Professional Look!
-					</div>
-					</a>
-				</div>
-
-				<div class="review">
-					<a href="https://youtu.be/qq65UO1ikpE" class="boxreview">
-					<div class="review-body">
-						How to stop sounding unprofessional | The Ultimate Interview Tip
-					</div>
-					</a>
-				</div>
-			</div>
-			<Footer />
-			</div>
-		</div>
-	);
+        {/* <div className="refs-container">
+          {references.map((reference) => (
+            <div className="refs" key={reference.id}>
+              <div className="refs-body">
+                <a href={reference.link}>{reference.title}</a>
+              </div>
+            </div>
+          ))}
+        </div> */}
+        <div className="refs-container">
+          {references.map((reference) => (
+            <a style={{textDecoration: "none"}} href={reference.link} key={reference.id} className="refs">
+              <div className="refs-body">
+                <span>{reference.title}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Student;
