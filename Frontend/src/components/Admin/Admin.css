@@ -9,7 +9,7 @@
 }
 .side-nav-containeradmin{
     background-color: var(--dark);
-    width: 350px;
+    width: 300px;
     height: 100vh;
     position: sticky;
     top: 0px;
@@ -24,15 +24,11 @@
 }
 .header-admin{
     font-size: 40px;
-    margin: 115px 0px 0px -425px;
-    display: flex;
-    width: 500px;
+    margin: 115px 0px 0px -490px;
 }
 .tasks-admin{
-    margin: 200px 0px 0px -390px;
+    margin: 210px 0px 0px -180px;
     font-size: 20px;
-    position: relative;
-    width: 100%;
 }
 #list-admin{
     margin: 45px 0px 45px 0px;
