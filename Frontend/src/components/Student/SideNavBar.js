@@ -65,6 +65,7 @@ const SideNavBar = () => {
 				<div className="nav-menu">
 					{menuItems.map(({ text, icon, path }) => (
 						// eslint-disable-next-line jsx-a11y/anchor-is-valid
+						//add tooltip to div below
 						<div className={isExpanded ? "menu-item" : "menu-item menu-item-NX"} onClick={() => navigate(`${path}`)}>
 						
 							<img className="menu-item-icon" src={icon} alt="" srcset="" />

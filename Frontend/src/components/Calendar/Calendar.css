@@ -1,0 +1,23 @@
+.header-admincal{
+    font-size: 40px;
+    margin: 75px 0px 0px -500px;
+}
+.body-box{
+    display: flex;
+    flex-direction: column;
+}
+.text-calendar{
+    margin-left: -490px;
+}
+.input-body{
+    display: flex;
+    flex-direction: row;
+    margin-left: -500px;
+    gap: 4rem;
+}
+.react-datepicker-wrapper{
+    width: 29%;
+}
+.react-datepicker{
+    border: 2px solid #3E9ECA;
+}
