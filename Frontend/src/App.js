@@ -11,6 +11,7 @@ import Welcome from './components/Welcome/Welcome';
 import About from './components/Student/About';
 import AboutA from './components/Admin/AboutA';
 import SkillScapeSplash from './components/Welcome/SkillScapeSplash';
+import StudentCalendar from './components/Calendar/StudentCalendar';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ function App() {
       <Route path='/adminhome' element={<Admin />} />
       <Route path='/studenthome' element={<Student />} />
       <Route path='/studentreview' element={<StudentReview />} />
+      <Route path='/studentcalendar' element={<StudentCalendar />} />
       <Route path='/studentcompany' element={<StudentCompany />} />
       <Route path='/adminlink' element={<AdminLink />} />
       <Route path='/admincompany' element={<AdminCompany />} />

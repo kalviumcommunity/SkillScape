@@ -20,6 +20,11 @@ const SideNavBar = () => {
 			icon: "icons/pie-chart.svg",
 			path: "/adminlink",
 		},
+		{
+			text: "Calendar",
+			icon: "icons/white-calendar-icon.svg",
+			path: "/studentcalendar"
+		},
         {
 			text: "Add Companies",
 			icon: "icons/folder.svg",
