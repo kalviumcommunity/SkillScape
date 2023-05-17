@@ -1,6 +1,7 @@
 require('dotenv').config()
 const referenceRoutes = require("./routes/referenceRoutes");
 const taskRoutes = require("./routes/taskPost");
+const studentsTask = require("./routes/studentTask");
 const express = require("express")
 const mongoose = require('mongoose')
 const cors = require("cors")
@@ -10,6 +11,7 @@ app.use(express.json())
 app.use(cors());
 app.use(taskRoutes);
 app.use(referenceRoutes);
+app.use(studentsTask);
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
+// import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import format from "date-fns/format";
 import parse from 'date-fns/parse';
@@ -11,6 +12,8 @@ import DatePicker from "react-datepicker";
 import AdminNavBar from '../Admin/AdminNavBar';
 import "react-datepicker/dist/react-datepicker.css"
 import "./Calendar.css"
+
+// const DnDCalendar = withDragAndDrop(Calendar)
 
 const locales = {
   "en-US": require("date-fns/locale/en-US")
@@ -43,6 +46,23 @@ const events = [
 
 function StudentCalendar() {
   const [newEvent, setNewEvent] = useState({title:"", start:"",end:""});
+
+  // const moveEvent = useCallback(
+  //   ({ event, start, end, isAllDay: droppedOnAllDaySlot = false }) => {
+  //     const { allDay } = event
+  //     if (!allDay && droppedOnAllDaySlot) {
+  //       event.allDay = true
+  //     }
+
+  //     setNewEvent((prev) => {
+  //       const existing = prev.find((ev) => ev.id === event.id) ?? {}
+  //       const filtered = prev.filter((ev) => ev.id !== event.id)
+  //       return [...filtered, { ...existing, start, end, allDay }]
+  //     })
+  //   },
+  //   [setNewEvent]
+  // )
+
   const {user,isAuthenticated} = useAuth0();
   const [allEvents, setAllEvents] = useState(events);
 
@@ -78,6 +98,7 @@ function StudentCalendar() {
               events={allEvents} 
               startAccessor="start" 
               endAccessor="end" 
+              // onEventDrop={moveEvent}
               style={{height:400, width:900, marginTop:"40px", marginLeft:"-505px"}} />
             </div>
             <Footer />

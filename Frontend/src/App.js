@@ -12,6 +12,7 @@ import About from './components/Student/About';
 import AboutA from './components/Admin/AboutA';
 import SkillScapeSplash from './components/Welcome/SkillScapeSplash';
 import StudentCalendar from './components/Calendar/StudentCalendar';
+import StudentTaskList from './components/Student/StudentTaskList';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ function App() {
       <Route path='/admincompany' element={<AdminCompany />} />
       <Route path='/about' element={<About />} />
       <Route path='/aboutadmin' element={<AboutA />} />
+      <Route path='/studenttasklist' element={<StudentTaskList />} />
     </Routes>
     </div>
     </>
