@@ -19,6 +19,11 @@ const SideNavBar = () => {
 			icon: "icons/pie-chart.svg",
 			path: "/studentreview",
 		},
+		{
+			text: "To-Do List",
+			icon: "icons/checkbox.svg",
+			path: "/studenttasklist",
+		},
         {
 			text: "Companies",
 			icon: "icons/folder.svg",

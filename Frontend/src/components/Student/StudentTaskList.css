@@ -1,0 +1,21 @@
+.tasks-students {
+    margin: 210px 0px 0px -270px;
+    font-size: 20px;
+}
+#add-button{
+    background-color: #3E9ECA;
+    color: white;
+    margin-left: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+#add-button:hover{
+    background-color: white;
+    color: #3E9ECA;
+    border: #3E9ECA 2px solid;
+    transition: 0.4s;
+}
