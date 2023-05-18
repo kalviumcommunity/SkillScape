@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaCheckCircle } from 'react-icons/fa';
-import { FaExclamationTriangle } from 'react-icons/fa';
 import { FaTimesCircle } from 'react-icons/fa';
 import SideNavBar from './SideNavBar';
 import './StudentTaskList.css';
 import Footer from '../Student/Footer';
-import Delete from '../Welcome/imagesw/delete.png';
+import Check from '../Welcome/imagesw/check.png'
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Student() {
@@ -76,8 +75,8 @@ function Student() {
     const newList = list.filter((data) => data._id !== id);
 
     setList(newList);
-    toast.warn("Task deleted!", {
-      icon: <FaExclamationTriangle color="#3f9eca" />,
+    toast.success("Task Completed!", {
+      icon: <FaCheckCircle color="#3f9eca" />,
       style: {
         background: "#061b28",
         color: "#3f9eca",
@@ -134,8 +133,8 @@ function Student() {
                   <img
                     onClick={() => deleteData(data._id)}
                     className="trash-icon"
-                    src={Delete}
-                    alt="trash"
+                    src={Check}
+                    alt="check"
                   />
                 </div>
               </li>
