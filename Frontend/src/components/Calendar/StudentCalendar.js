@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
+import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
@@ -82,6 +83,18 @@ function StudentCalendar() {
     });
   }
 
+  function resizeEvent({ event, start, end }) {
+    setAllEvents((prevEvents) => {
+      const updatedEvents = prevEvents.map((ev) => {
+        if (ev.id === event.id) {
+          return { ...ev, start, end };
+        }
+        return ev;
+      });
+      return updatedEvents;
+    });
+  }
+
   return (
     <div>
       <div id="container">
@@ -128,6 +141,8 @@ function StudentCalendar() {
               startAccessor="start"
               endAccessor="end"
               onEventDrop={moveEvent}
+              resizable={true} // Enable event resizing
+              onEventResize={resizeEvent} // Handle event resizing
               onSelectSlot={({ start, end }) => {
                 const title = window.prompt('Enter event title:');
                 if (title) {
