@@ -25,16 +25,6 @@ function Student() {
         <div className="header-sreview">
           <b>Reference List</b>
         </div>
-
-        {/* <div className="refs-container">
-          {references.map((reference) => (
-            <div className="refs" key={reference.id}>
-              <div className="refs-body">
-                <a href={reference.link}>{reference.title}</a>
-              </div>
-            </div>
-          ))}
-        </div> */}
         <div className="refs-container">
           {references.map((reference) => (
             <a style={{textDecoration: "none"}} href={reference.link} key={reference.id} className="refs">
