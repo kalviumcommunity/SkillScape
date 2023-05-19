@@ -24,37 +24,45 @@ const localizer = dateFnsLocalizer({
   locales
 });
 
-const events = [
-  {
-    id: 1,
-    title: 'Meeting with HOD',
-    allDay: true,
-    start: new Date(2023, 4, 19),
-    end: new Date(2023, 4, 19)
-  },
-  {
-    id: 2,
-    title: 'Make LinkedIn Profile',
-    start: new Date(2023, 4, 2),
-    end: new Date(2023, 4, 2)
-  },
-  {
-    id: 3,
-    title: 'Placement Drive',
-    start: new Date(2023, 4, 11),
-    end: new Date(2023, 4, 14)
-  }
-];
-
 const DnDCalendar = withDragAndDrop(Calendar);
 
 function StudentCalendar() {
-  const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const { user, isAuthenticated } = useAuth0();
-  const [allEvents, setAllEvents] = useState(events);
+  const [allEvents, setAllEvents] = useState([
+    {
+      id: 1,
+      title: 'Meeting with HOD',
+      allDay: true,
+      start: new Date(2023, 4, 19),
+      end: new Date(2023, 4, 19)
+    },
+    {
+      id: 2,
+      title: 'Make LinkedIn Profile',
+      start: new Date(2023, 4, 2),
+      end: new Date(2023, 4, 2)
+    },
+    {
+      id: 3,
+      title: 'Placement Drive',
+      start: new Date(2023, 4, 11),
+      end: new Date(2023, 4, 14)
+    }
+  ]);
+
+  const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
 
   function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent]);
+    if (newEvent.title && newEvent.start && newEvent.end) {
+      const event = {
+        id: allEvents.length + 1,
+        title: newEvent.title,
+        start: newEvent.start,
+        end: newEvent.end
+      };
+      setAllEvents([...allEvents, event]);
+      setNewEvent({ title: '', start: '', end: '' });
+    }
   }
 
   function moveEvent({ event, start, end, isAllDay: droppedOnAllDaySlot = false }) {
@@ -115,10 +123,23 @@ function StudentCalendar() {
           <div>
             <DnDCalendar
               localizer={localizer}
+              selectable={true}
               events={allEvents}
               startAccessor="start"
               endAccessor="end"
               onEventDrop={moveEvent}
+              onSelectSlot={({ start, end }) => {
+                const title = window.prompt('Enter event title:');
+                if (title) {
+                  const event = {
+                    id: allEvents.length + 1,
+                    title,
+                    start,
+                    end
+                  };
+                  setAllEvents([...allEvents, event]);
+                }
+              }}
               style={{ height: 400, width: 900, marginTop: "40px", marginLeft: "-505px" }}
             />
           </div>
