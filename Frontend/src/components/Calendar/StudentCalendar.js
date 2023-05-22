@@ -51,6 +51,7 @@ function StudentCalendar() {
     }
   ]);
 
+  const [selectedEvent, setSelectedEvent] = useState(null);
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
 
   function handleAddEvent() {
@@ -93,6 +94,17 @@ function StudentCalendar() {
       });
       return updatedEvents;
     });
+  }
+
+  function handleUpdateEvent() {
+    setAllEvents((prevEvents) => {
+      const updatedEvents = prevEvents.map((ev) =>
+        ev.id === selectedEvent.id ? selectedEvent : ev
+      );
+      return updatedEvents;
+    });
+
+    setSelectedEvent(null); 
   }
 
   return (
@@ -141,23 +153,28 @@ function StudentCalendar() {
               startAccessor="start"
               endAccessor="end"
               onEventDrop={moveEvent}
-              resizable={true} // Enable event resizing
-              onEventResize={resizeEvent} // Handle event resizing
-              onSelectSlot={({ start, end }) => {
-                const title = window.prompt('Enter event title:');
-                if (title) {
-                  const event = {
-                    id: allEvents.length + 1,
-                    title,
-                    start,
-                    end
-                  };
-                  setAllEvents([...allEvents, event]);
-                }
-              }}
+              resizable={true}
+              onEventResize={resizeEvent} 
+              onSelectEvent={(event) => setSelectedEvent(event)} 
               style={{ height: 400, width: 900, marginTop: "40px", marginLeft: "-505px" }}
             />
           </div>
+          {selectedEvent && (
+            <div style={{marginLeft:"-500px"}}>
+              <h3>Edit Event</h3>
+              <input
+                type="text"
+                id='input-box'
+                placeholder="Event title"
+                value={selectedEvent.title}
+                onChange={(e) =>
+                  setSelectedEvent({ ...selectedEvent, title: e.target.value })
+                }
+              />
+              <button className='addref' onClick={handleUpdateEvent}>Save</button>
+              <button className='addref' onClick={() => setSelectedEvent(null)}>Cancel</button>
+            </div>
+          )}
           <Footer />
         </div>
       </div>
