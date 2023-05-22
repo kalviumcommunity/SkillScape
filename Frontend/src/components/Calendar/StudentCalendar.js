@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
+import Modal from '@mui/material/Modal';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -53,6 +54,7 @@ function StudentCalendar() {
 
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function handleAddEvent() {
     if (newEvent.title && newEvent.start && newEvent.end) {
@@ -104,7 +106,16 @@ function StudentCalendar() {
       return updatedEvents;
     });
 
-    setSelectedEvent(null); 
+    handleCloseModal();
+  }
+
+  function handleOpenModal() {
+    setIsModalOpen(true);
+  }
+
+  function handleCloseModal() {
+    setIsModalOpen(false);
+    setSelectedEvent(null);
   }
 
   return (
@@ -154,14 +165,22 @@ function StudentCalendar() {
               endAccessor="end"
               onEventDrop={moveEvent}
               resizable={true}
-              onEventResize={resizeEvent} 
-              onSelectEvent={(event) => setSelectedEvent(event)} 
+              onEventResize={resizeEvent}
+              onSelectEvent={(event) => {
+                setSelectedEvent(event);
+                handleOpenModal();
+              }}
               style={{ height: 400, width: 900, marginTop: "40px", marginLeft: "-505px" }}
             />
           </div>
+          <Footer />
+        </div>
+      </div>
+      <Modal open={isModalOpen} onClose={handleCloseModal} className="modal-container">
+        <div className="modal-content">
           {selectedEvent && (
-            <div style={{marginLeft:"-500px"}}>
-              <h3>Edit Event</h3>
+            <>
+              <h3 style={{marginTop:"2px"}}>Edit Event</h3>
               <input
                 type="text"
                 id='input-box'
@@ -172,12 +191,11 @@ function StudentCalendar() {
                 }
               />
               <button className='addref' onClick={handleUpdateEvent}>Save</button>
-              <button className='addref' onClick={() => setSelectedEvent(null)}>Cancel</button>
-            </div>
+              <button className='addref' onClick={handleCloseModal}>Cancel</button>
+            </>
           )}
-          <Footer />
         </div>
-      </div>
+      </Modal>
     </div>
   );
 }
