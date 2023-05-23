@@ -5,7 +5,7 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <img className="logout-icon" src="icons/logout.svg" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} alt="" srcset="" />
+    <img className="logout-icon" src="icons/logout.svg" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} alt="" srcSet="" />
   );
 };
 
