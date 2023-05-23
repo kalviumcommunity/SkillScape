@@ -1,0 +1,9 @@
+.header-dcompany{
+    font-size: 40px;
+    margin: 85px 0px 0px -380px;
+}
+.playlist-container{
+    margin: 180px 0px 0px -330px;
+    max-height: 600px;
+    min-width: 900px;
+}

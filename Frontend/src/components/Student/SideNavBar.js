@@ -30,6 +30,11 @@ const SideNavBar = () => {
 			path: "/studentcompany",
 		},
 		{
+			text: "Developer's Choice",
+			icon: "icons/bulb.svg",
+			path: "/devchoice"
+		},
+		{
 			text: "About",
 			icon: "icons/user.svg",
 			path: "/about"
