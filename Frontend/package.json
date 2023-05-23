@@ -5,6 +5,7 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.0.1",
     "@chakra-ui/react": "^2.6.0",
+    "@codesweetly/react-youtube-playlist": "^1.0.7",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.1",
@@ -51,7 +52,6 @@
   },
   "description": "*Calendar.js*",
   "main": "index.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
