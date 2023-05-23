@@ -52,7 +52,7 @@ const SideNavBar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<img src={LogoImg} alt="" srcset="" />
+							<img src={LogoImg} alt="" srcSet="" />
 							<h2>SkillScape</h2>
 						</div>
 					)}
@@ -73,7 +73,7 @@ const SideNavBar = () => {
 						//add tooltip to div below
 						<div className={isExpanded ? "menu-item" : "menu-item menu-item-NX"} onClick={() => navigate(`${path}`)}>
 						
-							<img className="menu-item-icon" src={icon} alt="" srcset="" />
+							<img className="menu-item-icon" src={icon} alt="" srcSet="" />
 							{isExpanded && <p>{text}</p>}
 						</div>
 					))}

@@ -118,6 +118,20 @@ function StudentCalendar() {
     setSelectedEvent(null);
   }
 
+  function handleCalendarClick(slotInfo) {
+    const { start, end } = slotInfo;
+    const title = window.prompt('Enter event title:');
+    if (title) {
+      const event = {
+        id: allEvents.length + 1,
+        title,
+        start,
+        end
+      };
+      setAllEvents([...allEvents, event]);
+    }
+  }
+
   return (
     <div>
       <div id="container">
@@ -170,6 +184,7 @@ function StudentCalendar() {
                 setSelectedEvent(event);
                 handleOpenModal();
               }}
+              onSelectSlot={handleCalendarClick} // Add this line
               style={{ height: 400, width: 900, marginTop: "40px", marginLeft: "-505px" }}
             />
           </div>
@@ -180,7 +195,7 @@ function StudentCalendar() {
         <div className="modal-content">
           {selectedEvent && (
             <>
-              <h3 style={{marginTop:""}}>Edit Event</h3>
+              <h3 style={{ marginTop: "" }}>Edit Event</h3>
               <input
                 type="text"
                 id='input-box'
