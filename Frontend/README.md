@@ -1,8 +1,37 @@
+# Libraries Used
+-[Auth0](https://auth0.com/docs/quickstarts)
+-[ChakraUI](https://chakra-ui.com)
+-[react-youtube-playlist](https://www.npmjs.com/package/@codesweetly/react-youtube-playlist)
+-[Material UI](https://mui.com)
+-[Date-FNS](https://www.npmjs.com/package/date-fns)
+-[Framer-Motion](https://www.npmjs.com/package/framer-motion)
+-[React](https://react.dev)
+-[React-Big-Calendar](https://www.npmjs.com/package/react-big-calendar)
+-[React-Datepicker](https://www.npmjs.com/package/react-datepicker)
+-[React DOM](https://legacy.reactjs.org/docs/react-dom.html)
+-[JEST](https://jestjs.io)
+-[React Icons](https://react-icons.github.io/react-icons/)
+-[React Loader](https://mhnpd.github.io/react-loader-spinner/)
+-[React Router DOM](https://www.npmjs.com/package/react-router-dom)
+-[React Scripts](https://www.npmjs.com/package/react-scripts)
+-[React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+-[Typewriter Effect](https://www.npmjs.com/package/typewriter-effect)
+
+
+# Page Breakdown
+
 *Calendar.js*
 
 This code snippet is a student calendar page implemented in React. It utilizes the `react-big-calendar` library with drag and drop functionality. Admins can view, add, and manage events on the calendar.
 
 ![image](https://github.com/navaneeth-arun/SkillScape/assets/113344554/74013c5a-da10-4843-ba83-75dbe37dc1f8)
+
+
+*DevChoice.js*
+
+This snippet will display a frontend component for a Student page with a YouTube playlist component that displays the best tutorial videos for a profile as seuggested by the website developer. It utilizes the `@codesweetly/react-youtube-playlist` library to display the youtube playlist in the frontend.
+
+![image](https://github.com/kalviumcommunity/SkillScape/assets/113344554/0a4803c6-0b70-4b99-872f-39f3cec17a2e)
 
 
 *AdminLink.js*
