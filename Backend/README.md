@@ -24,11 +24,19 @@
 # Backend Routes
 
 👉`GET/tasks` - Gets all the tasks assigned by the Admin.
+
 👉`GET/references` - Gets all the reference materials that were assigned by the Admin.
+
 👉`GET/data` - Gets all the To-Do items that were self-assigned by the Students.
+
 👉`POST/tasks` - Allows Admins to create a new task for the Students.
+
 👉`POST/references` - Allows Admins to create a new reference item which the Students can use for building their profile.
+
 👉`POST/data` - Allows Students to add self-assigned tasks.
+
 👉`DELETE/tasks/:id` - Allows Admins to delete a task that was assigned to the Student.
+
 👉`DELETE/references/:id` - Allows Admins to remove a reference material.
+
 👉`DELETE/data/:id` - Allows Students to check(delete) a self assigned task.
