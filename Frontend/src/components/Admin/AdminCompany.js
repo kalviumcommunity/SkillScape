@@ -1,7 +1,6 @@
 import AdminNavBar from './AdminNavBar';
 import './AdminCompany.css';
 import Carousel from '../Carousel/Carousel';
-import Footer from '../Student/Footer';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function Admin() {
@@ -18,7 +17,6 @@ function Admin() {
             <b>Add Companies</b>
         </div>
         <Carousel />
-        <Footer />
         </div>
     </div>
   )

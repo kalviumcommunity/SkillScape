@@ -9,7 +9,6 @@ import parse from 'date-fns/parse';
 import startOfWeek from 'date-fns/startOfWeek';
 import getDay from 'date-fns/getDay';
 import { useAuth0 } from '@auth0/auth0-react';
-import Footer from '../Student/Footer';
 import DatePicker from 'react-datepicker';
 import AdminNavBar from '../Admin/AdminNavBar';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -188,7 +187,6 @@ function StudentCalendar() {
               style={{ height: 400, width: 900, marginTop: "40px", marginLeft: "-505px" }}
             />
           </div>
-          <Footer />
         </div>
       </div>
       <Modal open={isModalOpen} onClose={handleCloseModal} className="modal-container">

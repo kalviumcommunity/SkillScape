@@ -11,8 +11,9 @@
 }
 .header-scompany{
     font-size: 40px;
-    margin: 115px 0px 0px -315px;
+    margin: 115px 0px 0px -300px;
 }
+
 
 @media only screen and (max-width: 550px){
     .path-company{

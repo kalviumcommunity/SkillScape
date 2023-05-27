@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import SideNavBar from "./SideNavBar";
 import './Student.css';
-import Footer from './Footer'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaCheck } from 'react-icons/fa';
@@ -70,8 +69,6 @@ function Student() {
     				</label>
   					))}
 				</div>
-
-				<Footer />
 			</div>
 		</div>
 	);

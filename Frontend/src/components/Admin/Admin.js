@@ -6,7 +6,6 @@ import { FaExclamationTriangle } from 'react-icons/fa';
 import { FaTimesCircle } from 'react-icons/fa';
 import AdminNavBar from './AdminNavBar';
 import './Admin.css';
-import Footer from '../Student/Footer';
 import Delete from '../Welcome/imagesw/delete.png';
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -140,7 +139,6 @@ function Admin() {
               </li>
             ))}
           </ul>
-        <Footer />
         </div>
         </div>
     </div>

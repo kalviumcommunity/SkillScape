@@ -4,6 +4,7 @@ import LoginButton from '../auth0/login';
 import animation from './imagesw/animation1.gif'
 import logo from './imagesw/skillscape.png'
 import Typewriter from "typewriter-effect";
+import Footer from '../Student/Footer';
 
 function Welcome() {
   return (
@@ -19,7 +20,7 @@ function Welcome() {
             autoStart: true,
             loop: true,
             delay: 60,
-            strings: ["Simplifying profiles with ease", "Your personal profile builder", "Make your candidature remarkable", "Where your profile meets perfection"],
+            strings: ["Simplifying profiles with ease", "Your personal roadmap to the perfect profile", "Make your candidature remarkable", "Where your profile meets perfection"],
           }}
         />
         </h2>
@@ -32,6 +33,7 @@ function Welcome() {
       <div className='gif'>
         <img src={animation} alt="" />
       </div>
+      <Footer />
     </div>
     </div>
   )
