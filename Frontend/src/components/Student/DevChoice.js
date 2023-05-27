@@ -1,6 +1,5 @@
 import SideNavBar from "./SideNavBar";
 import './DevChoice.css';
-import Footer from './Footer';
 import { useAuth0 } from "@auth0/auth0-react";
 import YouTubePlaylist from "@codesweetly/react-youtube-playlist";
 
@@ -23,7 +22,6 @@ function Student() {
             uniqueName="Developers_Choice"
             />
             </div>
-            <Footer />
 			</div>
 		</div>
 	);

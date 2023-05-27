@@ -1,7 +1,7 @@
-import Carousel from "../Carousel/Carousel";
+// import Carousel from "../Carousel/Carousel";
+import Carswiper from "../Carousel/Swiper";
 import SideNavBar from "./SideNavBar";
 import './StudentCompany.css';
-import Footer from './Footer';
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Student() {
@@ -14,10 +14,10 @@ function Student() {
 				{isAuthenticated && user.name} / Student /<b> Company </b>
 			</div>
 			<div className="header-scompany">
-				<b>Companies Visiting</b>
+				<b>Top Companies</b>
 			</div>
-			<Carousel />
-			<Footer />
+			{/* <Carousel /> */}
+			<Carswiper />
 			</div>
 		</div>
 	);

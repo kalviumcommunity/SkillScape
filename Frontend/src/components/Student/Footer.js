@@ -49,7 +49,7 @@ import {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2023 SkillScape. Your Personal Profile Builder!</Text>
+          <Text>© 2023 SkillScape. Your Personal Roadmap to the Perfect Profile!</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
             </SocialButton>

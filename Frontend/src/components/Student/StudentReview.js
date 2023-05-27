@@ -1,6 +1,5 @@
 import SideNavBar from "./SideNavBar";
 import "./StudentReview.css";
-import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -35,7 +34,6 @@ function Student() {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
