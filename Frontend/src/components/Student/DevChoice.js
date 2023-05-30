@@ -9,6 +9,7 @@ function Student() {
 		<div>
 			<div id="container">
 			<SideNavBar />
+			<div className="test5">
 			<div className="path-company">
 				{isAuthenticated && user.name} / Student /<b> Developer's Choice </b>
 			</div>
@@ -22,6 +23,7 @@ function Student() {
             uniqueName="Developers_Choice"
             />
             </div>
+			</div>
 			</div>
 		</div>
 	);

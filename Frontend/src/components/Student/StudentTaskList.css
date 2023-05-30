@@ -1,6 +1,18 @@
 .tasks-students {
-    margin: 210px 0px 0px -270px;
+    margin-top: 25px;
     font-size: 20px;
+}
+.header-admin{
+    margin-top: 25px;
+}
+.test3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+#list-admin{
+    margin-top: 25px;
 }
 #add-button{
     background-color: #3E9ECA;
@@ -18,4 +30,7 @@
     color: #3E9ECA;
     border: #3E9ECA 2px solid;
     transition: 0.4s;
+}
+.meh{
+    margin-top: 20px;
 }

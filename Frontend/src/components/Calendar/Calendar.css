@@ -1,18 +1,14 @@
 .header-admincal{
     font-size: 40px;
-    margin: 75px 0px 0px -500px;
+    margin-top: 25px;
 }
 .body-box{
     display: flex;
     flex-direction: column;
 }
-.text-calendar{
-    margin-left: -490px;
-}
 .input-body{
     display: flex;
     flex-direction: row;
-    margin-left: -500px;
     gap: 4rem;
 }
 .react-datepicker-wrapper{
@@ -34,4 +30,10 @@
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .test9{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 80px;
   }

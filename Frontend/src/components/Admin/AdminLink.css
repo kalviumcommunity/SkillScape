@@ -1,7 +1,6 @@
 .path-adminlink{
     color: #8F9597;
     font-size: 18px;
-    margin: 40px 0px 0px 80px;
 }
 #container{
     display: flex;
@@ -9,19 +8,18 @@
 .path-adminlink b{
     color: #3E9ECA;
 }
+.test8{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 80px;
+}
 .header-adminl{
     font-size: 40px;
-    margin: 115px 0px 0px -495px;
+    margin-top: 25px;
 }
 .tasks-adminl{
-    margin: 200px 0px 0px -240px;
     font-size: 20px;
-}
-#list-admin{
-    margin: 45px 0px 45px 0px;
-}
-#task-admin{
-    margin: 65px 0px 0px -13px;
 }
 #input-box{
     background-color: white;
@@ -34,7 +32,7 @@
 .flex-ref{
     display: flex;
     flex-direction: column;
-    margin: 210px 0px 0px -280px;
+    margin-top: 25px;
 }
 .mehh{
     display: flex;
@@ -87,18 +85,3 @@
     cursor: crosshair;
     margin-top: 20px;
   }
-  
-  
-
-@media only screen and (max-width: 550px){
-    .path-adminlink{
-        margin: 30px 0px 0px 125px;
-    }
-    .tasks-adminl{
-        margin-top: 250px;
-        margin-right: -25px;
-    }
-    #add-buttonal{
-        margin: 0px 0px 0px -25px;
-    }
-}

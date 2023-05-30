@@ -15,7 +15,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './Calendar.css';
 
 const locales = {
-  'en-US': require('date-fns/locale/en-US')
+  'fr': require('date-fns/locale/fr')
 };
 const localizer = dateFnsLocalizer({
   format,
@@ -34,8 +34,8 @@ function StudentCalendar() {
       id: 1,
       title: 'Meeting with HOD',
       allDay: true,
-      start: new Date(2023, 4, 19),
-      end: new Date(2023, 4, 19)
+      start: new Date(2023, 4, 20),
+      end: new Date(2023, 4, 20)
     },
     {
       id: 2,
@@ -135,6 +135,7 @@ function StudentCalendar() {
     <div>
       <div id="container">
         <AdminNavBar />
+        <div className="test9">
         <div className='path-admin'>
           {isAuthenticated && user.name} / Admin /<b> Calendar </b>
         </div>
@@ -184,7 +185,7 @@ function StudentCalendar() {
                 handleOpenModal();
               }}
               onSelectSlot={handleCalendarClick} // Add this line
-              style={{ height: 400, width: 900, marginTop: "40px", marginLeft: "-505px" }}
+              style={{ height: 400, width: 900, marginTop: "40px" }}
             />
           </div>
         </div>
@@ -209,6 +210,7 @@ function StudentCalendar() {
           )}
         </div>
       </Modal>
+      </div>
     </div>
   );
 }

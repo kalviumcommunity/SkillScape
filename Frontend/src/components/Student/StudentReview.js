@@ -18,6 +18,7 @@ function Student() {
     <div>
       <div id="container">
         <SideNavBar />
+        <div className="test1">
         <div className="path-review">
           {isAuthenticated && user.name} / Student /<b> Review Links </b>
         </div>
@@ -32,6 +33,7 @@ function Student() {
               </div>
             </a>
           ))}
+        </div>
         </div>
       </div>
     </div>

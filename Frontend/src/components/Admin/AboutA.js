@@ -11,6 +11,7 @@ function AboutA() {
     <div className='admin-portal'>
         <div className="container">
         <AdminNavBar />
+        <div className="test11">
         <div className="path-aboutA">
 				{isAuthenticated && user.name} / Admin /<b> About </b>
 			</div>
@@ -23,10 +24,8 @@ function AboutA() {
           So if you're a student preparing for job placements, sign up today and start building your professional profile with our user-friendly platform.
           <strong> SkillScape, building profiles & shaping futures.</strong></p>
       </div>
-      <div className="bglogo">
-        <img src="https://res.cloudinary.com/dvfeh6kup/image/upload/v1666245172/dp_1_sbv3p6.webp" alt="kalvium" />
-      </div>
       <Footer />
+        </div>
         </div>
     </div>
   )

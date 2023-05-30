@@ -133,6 +133,7 @@ function ReferenceList() {
       <div id="container">
         <AdminNavBar />
         <ToastContainer />
+        <div className="test8">
         <div className='path-admin'>
             {isAuthenticated && user.name} / Admin /<b> Reference List </b>
         </div>
@@ -179,6 +180,7 @@ function ReferenceList() {
           </div>
         ))}
       </ul>
+      </div>
       </div>
       </div>
     </div>

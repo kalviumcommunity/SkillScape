@@ -11,6 +11,7 @@ function About() {
     <div>
         <div className="container">
         <SideNavBar />
+        <div className="test6">
         <div className="path-aboutS">
 				{isAuthenticated && user.name} / Student /<b> About </b>
 			</div>
@@ -23,10 +24,8 @@ function About() {
           So if you're a student preparing for job placements, sign up today and start building your professional profile with our user-friendly platform.
           <strong> SkillScape, building profiles & shaping futures.</strong></p>
       </div>
-      <div className="bglogo">
-        <img src="https://res.cloudinary.com/dvfeh6kup/image/upload/v1666245172/dp_1_sbv3p6.webp" alt="kalvium" />
-      </div>
       <Footer />
+        </div>
         </div>
     </div>
   )

@@ -1,63 +1,20 @@
 .path-admincomp{
     color: #8F9597;
     font-size: 18px;
-    margin: 40px 0px 0px 80px;
 }
 #container{
     display: flex;
+}
+.test10{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 80px;
 }
 .path-admincomp b{
     color: #3E9ECA;
 }
 .header-adminc{
     font-size: 40px;
-    margin: 115px 0px 0px -340px;
-}
-.tasks-adminc{
-    margin: 200px 0px 0px -290px;
-    font-size: 20px;
-}
-#list-admin{
-    margin: 45px 0px 45px 0px;
-}
-#task-admin{
-    margin: 65px 0px 0px -13px;
-}
-#add-buttonac{
-    background-color: #3E9ECA;
-    color: white;
-    margin-left: 10px;
-    width: 35px;
-    height: 30px;
-    border-radius: 8px;
-    font-size: 16px;
-}
-#close-buttontodo{
-    background-color: red;
-    color: white;
-    margin-left: 10px;
-    border-radius: 50%;
-    border: 1px solid #061b28;
-    font-size: 16px;
-}
-#input-box{
-    background-color: white;
-    color: #3E9ECA;
-    border-radius: 8px;
-    padding: 4px;
-    padding-right: 75px;
-    font-size: 16px;
-}
-
-@media only screen and (max-width: 550px){
-    .path-admincomp{
-        margin: 30px 0px 0px 125px;
-    }
-    .tasks-adminc{
-        margin-top: 250px;
-        margin-right: -25px;
-    }
-    #add-buttonac{
-        margin: 0px 0px 0px -20px;
-    }
+    margin-top: 25px;
 }

@@ -1,20 +1,24 @@
 .path-aboutS{
     color: #8F9597;
     font-size: 18px;
-    margin: 40px 0px 0px 80px;
 }
 .container{
     display: flex;
+}.test6{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 80px;
 }
 .path-aboutS b{
     color: #3E9ECA;
 }
 .header-aboutS{
     font-size: 40px;
-    margin: 115px 0px 0px -280px;
+    margin-top: 25px;
 }
 .display-box{
-    max-width: 300px;
+    margin-top: 25px;
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -27,12 +31,8 @@
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
-    margin: 255px 0px 0px -105px;
 }
 .display-box:hover{
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.45);
-    transition: 0.4s;
-}
-.bglogo{
-    margin: 330px 0px 0px -325px;
+    transition: 0.4s ease-in-out;
 }
