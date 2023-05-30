@@ -106,6 +106,7 @@ function Student() {
       <div id='container'>
         <SideNavBar />
         <ToastContainer />
+        <div className="test3">
         <div className='path-admin'>
           {isAuthenticated && user.name} / Student /<b> To-Do List </b>
         </div>
@@ -139,6 +140,7 @@ function Student() {
               </li>
             ))}
           </ul>
+        </div>
         </div>
       </div>
     </div>

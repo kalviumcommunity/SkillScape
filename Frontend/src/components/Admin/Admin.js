@@ -113,6 +113,7 @@ function Admin() {
         <div id='container'>
         <AdminNavBar />
         <ToastContainer />
+        <div className="test7">
         <div className='path-admin'>
             {isAuthenticated && user.name} / Admin /<b> Add tasks </b>
         </div>
@@ -139,6 +140,7 @@ function Admin() {
               </li>
             ))}
           </ul>
+        </div>
         </div>
         </div>
     </div>

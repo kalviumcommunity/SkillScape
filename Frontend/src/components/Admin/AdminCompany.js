@@ -10,6 +10,7 @@ function Admin() {
     <div>
         <div id='container'>
         <AdminNavBar />
+        <div className="test10">
         <div className='path-admincomp'>
             {isAuthenticated && user.name} / Admin /<b> Add Companies </b>
         </div>
@@ -17,6 +18,7 @@ function Admin() {
             <b>Add Companies</b>
         </div>
         <Carousel />
+        </div>
         </div>
     </div>
   )

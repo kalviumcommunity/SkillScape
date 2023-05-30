@@ -34,6 +34,7 @@ function Student() {
 			<div id="container">
 				<SideNavBar />
 				<ToastContainer />
+				<div className="test">
 				<div className="path-student">
 					{isAuthenticated && user.name} / Student /<b> Pre-requsites </b>
 				</div>
@@ -68,6 +69,7 @@ function Student() {
      					</div>
     				</label>
   					))}
+				</div>
 				</div>
 			</div>
 		</div>
